@@ -29,7 +29,7 @@ public class DebugScreen : MonoBehaviour
     void Update()
     {
 
-        string debugText = "b3agz' Code a Game Like Minecraft in Unity";
+        string debugText = "Debug Skjar";
         debugText += "\n";
         debugText += frameRate + " fps";
         debugText += "\n\n";
