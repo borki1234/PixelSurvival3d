@@ -697,7 +697,6 @@ GameObject:
   - component: {fileID: 225037869}
   - component: {fileID: 225037872}
   - component: {fileID: 225037871}
-  - component: {fileID: 225037870}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -720,27 +719,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1624280759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &225037870
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225037868}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &225037871
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -973,7 +951,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.05
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -1002,7 +980,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.8, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8, z: -0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1557,7 +1535,6 @@ GameObject:
   - component: {fileID: 799112425}
   - component: {fileID: 799112428}
   - component: {fileID: 799112427}
-  - component: {fileID: 799112426}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1580,27 +1557,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1173961222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &799112426
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799112424}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &799112427
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1950,7 +1906,7 @@ MonoBehaviour:
   player: {fileID: 2118015170}
   spawnPosition: {x: 0, y: 0, z: 0}
   material: {fileID: 2100000, guid: a20cde319265da34384d5ff085d5dab2, type: 2}
-  transparentMaterial: {fileID: 2100000, guid: f0810b87732d7dd428428868b5641af9, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: 8db0073c9a8c7874b8d8f3ebe32cf7f5, type: 2}
   blocktypes:
   - blockName: Air
     isSolid: 0
