@@ -1899,11 +1899,9 @@ MonoBehaviour:
     enableThreading: 0
     enableAnimatedChunks: 0
     mouseSensitivity: 2.68
-    seed: 21
   biomes:
   - {fileID: 11400000, guid: 7f66ba39226ee3b4693a28512ed2ec1c, type: 2}
   - {fileID: 11400000, guid: e495ffa461080fc448303e0751de0db0, type: 2}
-  - {fileID: 11400000, guid: 493d373f8dd0d4e44a9624d3cf2da54b, type: 2}
   globalLightLevel: 1
   day: {r: 0.2516465, g: 0.6092771, b: 0.8207547, a: 0}
   night: {r: 0, g: 0.010261925, b: 0.1792453, a: 0}
