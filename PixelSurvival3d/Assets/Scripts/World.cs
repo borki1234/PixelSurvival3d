@@ -41,6 +41,8 @@ public class World : MonoBehaviour
 
     private bool _inUI = false;
 
+    public Clouds clouds;
+
     public GameObject debugScreen;
 
     public GameObject creativeInventoryWindow;
@@ -74,7 +76,7 @@ public class World : MonoBehaviour
         }
 
         SetGlobalLightValue();
-        spawnPosition = new Vector3((VoxelData.WorldSizeInChunks * VoxelData.ChunkWidth) / 2f, VoxelData.ChunkHeight - 50f, (VoxelData.WorldSizeInChunks * VoxelData.ChunkWidth) / 2f);
+        spawnPosition = new Vector3(VoxelData.WorldCentre, VoxelData.ChunkHeight - 50f, VoxelData.WorldCentre);
         GenerateWorld();
         playerLastChunkCoord = GetChunkCoordFromVector3(player.position);
 
@@ -261,6 +263,8 @@ public class World : MonoBehaviour
 
     void CheckViewDistance()
     {
+
+        clouds.UpdateClouds();
 
         ChunkCoord coord = GetChunkCoordFromVector3(player.position);
         playerLastChunkCoord = playerChunkCoord;
@@ -588,6 +592,7 @@ public class Settings
     [Header("Performance")]
     public int viewDistance = 8;
     public bool enableThreading = true;
+    public CloudStyle clouds = CloudStyle.Fast;
     public bool enableAnimatedChunks = false;
 
     [Header("Controls")]
