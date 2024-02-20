@@ -8,7 +8,7 @@ Shader"Minecraft/WaterShader" {
 	SubShader {
 		
 		Tags {"Queue"="Transparent" "RenderType"="Transparent"}
-LOD100
+LOD 100
 		Lighting
 Off
 		ZWrite

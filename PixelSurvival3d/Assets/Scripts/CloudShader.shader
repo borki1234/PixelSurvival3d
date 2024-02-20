@@ -12,14 +12,14 @@ Lighting Off
 		Fog {
 Mode Off}
 
-Blend SrcAlphaOneMinusSrcAlpha
+Blend SrcAlpha OneMinusSrcAlpha
 
 		Pass {
 
 			Stencil {
 			
-Ref1
-				CompGreater
+Ref 1
+				Comp Greater
 				Pass IncrSat
 
 			}

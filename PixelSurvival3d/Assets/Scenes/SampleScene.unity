@@ -1895,31 +1895,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     version: 0.0.1
-    loadDistance: 16
     viewDistance: 5
     enableThreading: 0
-    clouds: 1
     enableAnimatedChunks: 0
     mouseSensitivity: 2.68
+    seed: 21
   biomes:
   - {fileID: 11400000, guid: 7f66ba39226ee3b4693a28512ed2ec1c, type: 2}
   - {fileID: 11400000, guid: e495ffa461080fc448303e0751de0db0, type: 2}
+  - {fileID: 11400000, guid: 493d373f8dd0d4e44a9624d3cf2da54b, type: 2}
   globalLightLevel: 1
   day: {r: 0.2516465, g: 0.6092771, b: 0.8207547, a: 0}
   night: {r: 0, g: 0.010261925, b: 0.1792453, a: 0}
   player: {fileID: 2118015170}
-  _player: {fileID: 2118015171}
   spawnPosition: {x: 0, y: 0, z: 0}
   material: {fileID: 2100000, guid: a20cde319265da34384d5ff085d5dab2, type: 2}
   transparentMaterial: {fileID: 2100000, guid: 8db0073c9a8c7874b8d8f3ebe32cf7f5, type: 2}
-  waterMaterial: {fileID: 2100000, guid: 8d2730ed3decdb34abbef3b89e54f9bc, type: 2}
   blocktypes:
   - blockName: Air
     isSolid: 0
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 1
-    isWater: 0
-    opacity: 0
+    transparency: 1
     icon: {fileID: 0}
     backFaceTexture: 0
     frontFaceTexture: 0
@@ -1929,10 +1925,8 @@ MonoBehaviour:
     rightFaceTexture: 0
   - blockName: Bedrock
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: 47710860, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 9
     frontFaceTexture: 9
@@ -1942,10 +1936,8 @@ MonoBehaviour:
     rightFaceTexture: 9
   - blockName: Stone
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: 1589925953, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 0
     frontFaceTexture: 0
@@ -1955,10 +1947,8 @@ MonoBehaviour:
     rightFaceTexture: 0
   - blockName: Grass
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: 1282380081, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 2
     frontFaceTexture: 2
@@ -1968,10 +1958,8 @@ MonoBehaviour:
     rightFaceTexture: 2
   - blockName: Sand
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: -1753274407, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 10
     frontFaceTexture: 10
@@ -1981,10 +1969,8 @@ MonoBehaviour:
     rightFaceTexture: 10
   - blockName: Dirt
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: -1648325891, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 1
     frontFaceTexture: 1
@@ -1994,10 +1980,8 @@ MonoBehaviour:
     rightFaceTexture: 1
   - blockName: oak
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: -939786839, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 5
     frontFaceTexture: 5
@@ -2007,10 +1991,8 @@ MonoBehaviour:
     rightFaceTexture: 5
   - blockName: wood
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: -996348966, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 4
     frontFaceTexture: 4
@@ -2020,10 +2002,8 @@ MonoBehaviour:
     rightFaceTexture: 4
   - blockName: Brick
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: 1692950561, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 11
     frontFaceTexture: 11
@@ -2033,10 +2013,8 @@ MonoBehaviour:
     rightFaceTexture: 11
   - blockName: Cobblestone
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: -1166079791, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 8
     frontFaceTexture: 8
@@ -2046,10 +2024,8 @@ MonoBehaviour:
     rightFaceTexture: 8
   - blockName: Glass
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 1
-    isWater: 0
-    opacity: 0
+    transparency: 1
     icon: {fileID: -1937118089, guid: 181163b21489f394e9d193423e5011a3, type: 3}
     backFaceTexture: 3
     frontFaceTexture: 3
@@ -2059,10 +2035,8 @@ MonoBehaviour:
     rightFaceTexture: 3
   - blockName: Leaves
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 1
-    isWater: 0
-    opacity: 5
+    transparency: 0.5
     icon: {fileID: 0}
     backFaceTexture: 16
     frontFaceTexture: 16
@@ -2072,10 +2046,8 @@ MonoBehaviour:
     rightFaceTexture: 16
   - blockName: Cactus
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 1
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: 0}
     backFaceTexture: 18
     frontFaceTexture: 18
@@ -2085,10 +2057,8 @@ MonoBehaviour:
     rightFaceTexture: 18
   - blockName: Cactus Top
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 1
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: 0}
     backFaceTexture: 18
     frontFaceTexture: 18
@@ -2096,38 +2066,10 @@ MonoBehaviour:
     bottomFaceTexture: 19
     leftFaceTexture: 18
     rightFaceTexture: 18
-  - blockName: Water
-    isSolid: 1
-    meshData: {fileID: 11400000, guid: d2fbc50c624fddd43a7f3eee37bc4b37, type: 2}
-    renderNeighborFaces: 1
-    isWater: 1
-    opacity: 7
-    icon: {fileID: -1937118089, guid: 181163b21489f394e9d193423e5011a3, type: 3}
-    backFaceTexture: 20
-    frontFaceTexture: 20
-    topFaceTexture: 20
-    bottomFaceTexture: 20
-    leftFaceTexture: 20
-    rightFaceTexture: 20
-  - blockName: CobblestoneSlab
-    isSolid: 1
-    meshData: {fileID: 11400000, guid: 0e90933a7ea10544b809bec6576be76e, type: 2}
-    renderNeighborFaces: 1
-    isWater: 0
-    opacity: 15
-    icon: {fileID: -1166079791, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
-    backFaceTexture: 8
-    frontFaceTexture: 8
-    topFaceTexture: 8
-    bottomFaceTexture: 8
-    leftFaceTexture: 8
-    rightFaceTexture: 8
   - blockName: Furnace
     isSolid: 1
-    meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
-    isWater: 0
-    opacity: 15
+    transparency: 0
     icon: {fileID: 0}
     backFaceTexture: 13
     frontFaceTexture: 12
@@ -2135,14 +2077,9 @@ MonoBehaviour:
     bottomFaceTexture: 15
     leftFaceTexture: 13
     rightFaceTexture: 13
-  clouds: {fileID: 1680818781}
   debugScreen: {fileID: 394520474}
   creativeInventoryWindow: {fileID: 164842059}
   cursorSlot: {fileID: 1181438123}
-  worldData:
-    worldName: 
-    seed: 0
-  appPath: 
 --- !u!224 &861853812 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6982420146341897638, guid: 98abd811fb6ffae45bb8e5088da730b9,
@@ -2782,107 +2719,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98abd811fb6ffae45bb8e5088da730b9, type: 3}
---- !u!1 &1680818779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1680818782}
-  - component: {fileID: 1680818781}
-  - component: {fileID: 1680818780}
-  - component: {fileID: 1680818783}
-  m_Layer: 0
-  m_Name: Clouds
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1680818780
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680818779}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 1e72236cda9a6c3489f8e87e35c568c2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1680818781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680818779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85aaf6f443284f14188ac8b4cb6febaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cloudHeight: 100
-  cloudDepth: 4
-  cloudPattern: {fileID: 2800000, guid: 3b64d739460f29d40a702d12694cdeb8, type: 3}
-  cloudMaterial: {fileID: 2100000, guid: 1e72236cda9a6c3489f8e87e35c568c2, type: 2}
-  world: {fileID: 848234598}
---- !u!4 &1680818782
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680818779}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 577.9562, y: -125.257515, z: 731.4746}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1680818783
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680818779}
-  m_Mesh: {fileID: 0}
 --- !u!1 &1682205573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3194,7 +3030,6 @@ MonoBehaviour:
   gravity: -9.8
   playerWidth: 0.15
   boundsTolerance: 0.1
-  orientation: 0
   highlightBlock: {fileID: 1173961222}
   placeBlock: {fileID: 1624280759}
   checkIncrement: 0.1
@@ -3330,4 +3165,3 @@ SceneRoots:
   - {fileID: 952194089}
   - {fileID: 1173961222}
   - {fileID: 1624280759}
-  - {fileID: 1680818782}

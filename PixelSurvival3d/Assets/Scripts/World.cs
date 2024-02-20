@@ -449,7 +449,7 @@ public class World : MonoBehaviour
             voxelValue = biome.subSurfaceBlock;
         else if (yPos > terrainHeight)
         {
-            if (yPos < 51)
+            if (yPos < 46)
                 return 14;
             else
                 return 0;
