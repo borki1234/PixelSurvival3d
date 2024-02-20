@@ -29,7 +29,7 @@ public class DebugScreen : MonoBehaviour
     void Update()
     {
 
-        string debugText = "Debug Skjar";
+        string debugText = "b3agz' Code a Game Like Minecraft in Unity";
         debugText += "\n";
         debugText += frameRate + " fps";
         debugText += "\n\n";
@@ -37,7 +37,27 @@ public class DebugScreen : MonoBehaviour
         debugText += "\n";
         debugText += "Chunk: " + (world.playerChunkCoord.x - halfWorldSizeInChunks) + " / " + (world.playerChunkCoord.z - halfWorldSizeInChunks);
 
+        string direction = "";
+        switch (world._player.orientation)
+        {
 
+            case 0:
+                direction = "South";
+                break;
+            case 5:
+                direction = "East";
+                break;
+            case 1:
+                direction = "North";
+                break;
+            default:
+                direction = "West";
+                break;
+
+        }
+
+        debugText += "\n";
+        debugText += "Direction Facing: " + direction;
 
         text.text = debugText;
 

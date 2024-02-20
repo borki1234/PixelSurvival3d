@@ -18,10 +18,12 @@ public class World : MonoBehaviour
     public Color night;
 
     public Transform player;
+    public Player _player;
     public Vector3 spawnPosition;
 
     public Material material;
     public Material transparentMaterial;
+    public Material waterMaterial;
 
     public BlockType[] blocktypes;
 
@@ -70,6 +72,8 @@ public class World : MonoBehaviour
             _instance = this;
 
         appPath = Application.persistentDataPath;
+
+        _player = player.GetComponent<Player>();
 
     }
 
@@ -250,7 +254,7 @@ public class World : MonoBehaviour
 
                 VoxelMod v = queue.Dequeue();
 
-                worldData.SetVoxel(v.position, v.id);
+                worldData.SetVoxel(v.position, v.id, 1);
 
             }
         }
@@ -444,7 +448,13 @@ public class World : MonoBehaviour
         else if (yPos < terrainHeight && yPos > terrainHeight - 4)
             voxelValue = biome.subSurfaceBlock;
         else if (yPos > terrainHeight)
-            return 0;
+        {
+            if (yPos < 51)
+                return 14;
+            else
+                return 0;
+
+        }
         else
             voxelValue = 2;
 
@@ -517,6 +527,7 @@ public class BlockType
     public bool isSolid;
     public VoxelMeshData meshData;
     public bool renderNeighborFaces;
+    public bool isWater;
     public byte opacity;
     public Sprite icon;
 

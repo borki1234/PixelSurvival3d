@@ -1908,14 +1908,17 @@ MonoBehaviour:
   day: {r: 0.2516465, g: 0.6092771, b: 0.8207547, a: 0}
   night: {r: 0, g: 0.010261925, b: 0.1792453, a: 0}
   player: {fileID: 2118015170}
+  _player: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 0}
   material: {fileID: 2100000, guid: a20cde319265da34384d5ff085d5dab2, type: 2}
   transparentMaterial: {fileID: 2100000, guid: 8db0073c9a8c7874b8d8f3ebe32cf7f5, type: 2}
+  waterMaterial: {fileID: 0}
   blocktypes:
   - blockName: Air
     isSolid: 0
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 1
+    isWater: 0
     opacity: 0
     icon: {fileID: 0}
     backFaceTexture: 0
@@ -1928,6 +1931,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
+    isWater: 0
     opacity: 15
     icon: {fileID: 47710860, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 9
@@ -1940,6 +1944,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
+    isWater: 0
     opacity: 15
     icon: {fileID: 1589925953, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 0
@@ -1952,6 +1957,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
+    isWater: 0
     opacity: 15
     icon: {fileID: 1282380081, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 2
@@ -1964,6 +1970,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
+    isWater: 0
     opacity: 15
     icon: {fileID: -1753274407, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 10
@@ -1976,6 +1983,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
+    isWater: 0
     opacity: 15
     icon: {fileID: -1648325891, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 1
@@ -1988,6 +1996,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
+    isWater: 0
     opacity: 15
     icon: {fileID: -939786839, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 5
@@ -2000,6 +2009,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
+    isWater: 0
     opacity: 15
     icon: {fileID: -996348966, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 4
@@ -2012,6 +2022,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
+    isWater: 0
     opacity: 15
     icon: {fileID: 1692950561, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 11
@@ -2024,6 +2035,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
+    isWater: 0
     opacity: 15
     icon: {fileID: -1166079791, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 8
@@ -2036,6 +2048,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 1
+    isWater: 0
     opacity: 0
     icon: {fileID: -1937118089, guid: 181163b21489f394e9d193423e5011a3, type: 3}
     backFaceTexture: 3
@@ -2048,6 +2061,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 1
+    isWater: 0
     opacity: 5
     icon: {fileID: 0}
     backFaceTexture: 16
@@ -2060,6 +2074,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 1
+    isWater: 0
     opacity: 15
     icon: {fileID: 0}
     backFaceTexture: 18
@@ -2072,6 +2087,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 1
+    isWater: 0
     opacity: 15
     icon: {fileID: 0}
     backFaceTexture: 18
@@ -2080,10 +2096,24 @@ MonoBehaviour:
     bottomFaceTexture: 19
     leftFaceTexture: 18
     rightFaceTexture: 18
+  - blockName: Water
+    isSolid: 1
+    meshData: {fileID: 11400000, guid: d2fbc50c624fddd43a7f3eee37bc4b37, type: 2}
+    renderNeighborFaces: 1
+    isWater: 0
+    opacity: 7
+    icon: {fileID: -1937118089, guid: 181163b21489f394e9d193423e5011a3, type: 3}
+    backFaceTexture: 20
+    frontFaceTexture: 20
+    topFaceTexture: 20
+    bottomFaceTexture: 20
+    leftFaceTexture: 20
+    rightFaceTexture: 20
   - blockName: CobblestoneSlab
     isSolid: 1
     meshData: {fileID: 11400000, guid: 0e90933a7ea10544b809bec6576be76e, type: 2}
     renderNeighborFaces: 1
+    isWater: 0
     opacity: 15
     icon: {fileID: -1166079791, guid: 78e2cb917e4071745b0d478dec2a6133, type: 3}
     backFaceTexture: 8
@@ -2096,6 +2126,7 @@ MonoBehaviour:
     isSolid: 1
     meshData: {fileID: 11400000, guid: 6d765bee5e8de0d4b81432843e517345, type: 2}
     renderNeighborFaces: 0
+    isWater: 0
     opacity: 15
     icon: {fileID: 0}
     backFaceTexture: 13
@@ -3163,6 +3194,7 @@ MonoBehaviour:
   gravity: -9.8
   playerWidth: 0.15
   boundsTolerance: 0.1
+  orientation: 0
   highlightBlock: {fileID: 1173961222}
   placeBlock: {fileID: 1624280759}
   checkIncrement: 0.1
