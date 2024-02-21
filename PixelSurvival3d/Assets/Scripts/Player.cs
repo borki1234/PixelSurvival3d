@@ -37,15 +37,34 @@ public class Player : MonoBehaviour
 
     public Toolbar toolbar;
 
+    public int maxHealth = 100;
+    private int currentHealth;
+
     private void Start()
     {
-
         cam = GameObject.Find("Main Camera").transform;
         world = GameObject.Find("World").GetComponent<World>();
-
         world.inUI = false;
 
+        // Initialize player health
+        currentHealth = maxHealth;
     }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        // Handle player death here (e.g., restart level, show death screen, etc.)
+        Debug.Log("Player has died.");
+    }
+
 
     private void FixedUpdate()
     {

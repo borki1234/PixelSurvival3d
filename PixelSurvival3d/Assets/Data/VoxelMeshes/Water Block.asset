@@ -16,10 +16,10 @@ MonoBehaviour:
   faces:
   - direction: Back
     vertData: []
-    triangles: 000000000100000003000000030000000100000002000000
+    triangles: 
   - direction: Front
     vertData: []
-    triangles: 000000000300000001000000010000000300000002000000
+    triangles: 
   - direction: Top
     vertData:
     - position: {x: 0, y: 0.875, z: 0}
@@ -33,10 +33,10 @@ MonoBehaviour:
     triangles: 000000000100000003000000030000000100000002000000
   - direction: Bottom
     vertData: []
-    triangles: 000000000300000001000000010000000300000002000000
+    triangles: 
   - direction: Left
     vertData: []
-    triangles: 000000000300000001000000010000000300000002000000
+    triangles: 
   - direction: Right
     vertData: []
-    triangles: 000000000100000003000000030000000100000002000000
+    triangles: 
