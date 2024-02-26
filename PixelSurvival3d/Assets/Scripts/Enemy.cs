@@ -14,10 +14,15 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        world = GameObject.Find("World").GetComponent<World>();
+        world = GameObject.FindObjectOfType<World>();
 
-        //world = GameObject.FindObjectOfType<World>();
+        // Ensure the world variable is not null before proceeding
+        if (world == null)
+        {
+            Debug.LogError("Failed to find the World instance. Make sure there's a GameObject with a World component in the scene.");
+        }
     }
+
 
     void Update()
     {

@@ -1756,7 +1756,7 @@ MonoBehaviour:
   day: {r: 0.2516465, g: 0.6092771, b: 0.8207547, a: 0}
   night: {r: 0, g: 0.010261925, b: 0.1792453, a: 0}
   player: {fileID: 2118015170}
-  _player: {fileID: 2118015171}
+  _player: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 0}
   material: {fileID: 2100000, guid: a20cde319265da34384d5ff085d5dab2, type: 2}
   transparentMaterial: {fileID: 2100000, guid: 8db0073c9a8c7874b8d8f3ebe32cf7f5, type: 2}
@@ -1769,6 +1769,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 0
     icon: {fileID: 0}
+    isActive: 0
     backFaceTexture: 0
     frontFaceTexture: 0
     topFaceTexture: 0
@@ -1782,6 +1783,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: -758668441, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 9
     frontFaceTexture: 9
     topFaceTexture: 9
@@ -1795,6 +1797,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: -1908397214, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 0
     frontFaceTexture: 0
     topFaceTexture: 0
@@ -1808,6 +1811,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: -2010043122, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 1
     backFaceTexture: 2
     frontFaceTexture: 2
     topFaceTexture: 7
@@ -1821,6 +1825,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: 459112575, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 10
     frontFaceTexture: 10
     topFaceTexture: 10
@@ -1834,6 +1839,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: -1166997170, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 1
     frontFaceTexture: 1
     topFaceTexture: 1
@@ -1847,6 +1853,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: 1682793710, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 5
     frontFaceTexture: 5
     topFaceTexture: 6
@@ -1860,6 +1867,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: -1450693731, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 4
     frontFaceTexture: 4
     topFaceTexture: 4
@@ -1873,6 +1881,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: -276127156, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 11
     frontFaceTexture: 11
     topFaceTexture: 11
@@ -1886,6 +1895,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: -1506919978, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 8
     frontFaceTexture: 8
     topFaceTexture: 8
@@ -1899,6 +1909,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 0
     icon: {fileID: 1703279329, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 3
     frontFaceTexture: 3
     topFaceTexture: 3
@@ -1912,6 +1923,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 5
     icon: {fileID: -903173561, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 16
     frontFaceTexture: 16
     topFaceTexture: 16
@@ -1925,6 +1937,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: -2122890775, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 18
     frontFaceTexture: 18
     topFaceTexture: 19
@@ -1938,6 +1951,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: 1775731468, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 18
     frontFaceTexture: 18
     topFaceTexture: 17
@@ -1951,6 +1965,7 @@ MonoBehaviour:
     isWater: 1
     opacity: 7
     icon: {fileID: -1961108805, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 20
     frontFaceTexture: 20
     topFaceTexture: 20
@@ -1964,6 +1979,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: -1506919978, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 8
     frontFaceTexture: 8
     topFaceTexture: 8
@@ -1977,6 +1993,7 @@ MonoBehaviour:
     isWater: 0
     opacity: 15
     icon: {fileID: 1451630801, guid: 1cf2835d1cacdc148905c1fe2912d44a, type: 3}
+    isActive: 0
     backFaceTexture: 13
     frontFaceTexture: 12
     topFaceTexture: 15
@@ -2007,7 +2024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &849081031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3289,6 +3306,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393515742209953580, guid: 62351cc50ed157e4e86992f5a2df2b50,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7850766903977229463, guid: 62351cc50ed157e4e86992f5a2df2b50,
         type: 3}

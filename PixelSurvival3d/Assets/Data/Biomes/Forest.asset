@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72852c8e797262b48aee31d4fbb55c09, type: 3}
   m_Name: Forest
   m_EditorClassIdentifier: 
-  biomeName: Grasslands
+  biomeName: Forest
   offset: 87544
   scale: 0.17
   terrainHeight: 80

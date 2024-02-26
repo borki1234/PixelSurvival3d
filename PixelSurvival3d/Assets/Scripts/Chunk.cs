@@ -27,6 +27,8 @@ public class Chunk
 
     ChunkData chunkData;
 
+    List<VoxelState> activeVoxels = new List<VoxelState>();
+
     public Chunk(ChunkCoord _coord)
     {
 
@@ -49,10 +51,40 @@ public class Chunk
         chunkData = World.Instance.worldData.RequestChunk(new Vector2Int((int)position.x, (int)position.z), true);
         chunkData.chunk = this;
 
+        for (int y = 0; y < VoxelData.ChunkHeight; y++)
+        {
+            for (int x = 0; x < VoxelData.ChunkWidth; x++)
+            {
+                for (int z = 0; z < VoxelData.ChunkWidth; z++)
+                {
+
+                    VoxelState voxel = chunkData.map[x, y, z];
+                    if (voxel.properties.isActive)
+                        AddActiveVoxel(voxel);
+
+                }
+            }
+        }
+
         World.Instance.AddChunkToUpdate(this);
 
-     //   if (World.Instance.settings.enableAnimatedChunks)
-       //     chunkObject.AddComponent<ChunkLoadAnimation>();
+        if (World.Instance.settings.enableAnimatedChunks)
+            chunkObject.AddComponent<ChunkLoadAnimation>();
+
+    }
+
+    public void TickUpdate()
+    {
+
+        Debug.Log(chunkObject.name + " currently has " + activeVoxels.Count + " active blocks.");
+        for (int i = activeVoxels.Count - 1; i > -1; i--)
+        {
+            if (!BlockBehaviour.Active(activeVoxels[i]))
+                RemoveActiveVoxel(activeVoxels[i]);
+            else
+                BlockBehaviour.Behave(activeVoxels[i]);
+        }
+
 
     }
 
@@ -80,6 +112,28 @@ public class Chunk
 
     }
 
+    public void AddActiveVoxel(VoxelState voxel)
+    {
+
+        if (!activeVoxels.Contains(voxel)) // Make sure voxel isn't already in list.
+            activeVoxels.Add(voxel);
+
+    }
+
+    public void RemoveActiveVoxel(VoxelState voxel)
+    {
+
+        for (int i = 0; i < activeVoxels.Count; i++)
+        {
+
+            if (activeVoxels[i] == voxel)
+            {
+                activeVoxels.RemoveAt(i);
+                return;
+            }
+        }
+    }
+
     void ClearMeshData()
     {
 
@@ -87,6 +141,7 @@ public class Chunk
         vertices.Clear();
         triangles.Clear();
         transparentTriangles.Clear();
+        waterTriangles.Clear();
         uvs.Clear();
         colors.Clear();
         normals.Clear();
@@ -121,7 +176,6 @@ public class Chunk
         chunkData.ModifyVoxel(new Vector3Int(xCheck, yCheck, zCheck), newID, World.Instance._player.orientation);
 
         UpdateSurroundingVoxels(xCheck, yCheck, zCheck);
-
 
     }
 
