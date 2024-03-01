@@ -47,6 +47,8 @@ public class World : MonoBehaviour
     public GameObject debugScreen;
 
     public GameObject creativeInventoryWindow;
+    public GameObject craftingInventoryWindow;
+
     public GameObject cursorSlot;
 
     Thread ChunkUpdateThread;
@@ -364,6 +366,7 @@ public class World : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 creativeInventoryWindow.SetActive(true);
+                //craftingInventoryWindow.SetActive(true);
                 cursorSlot.SetActive(true);
             }
             else
@@ -371,6 +374,8 @@ public class World : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 creativeInventoryWindow.SetActive(false);
+                craftingInventoryWindow.SetActive(false);
+
                 cursorSlot.SetActive(false);
             }
         }

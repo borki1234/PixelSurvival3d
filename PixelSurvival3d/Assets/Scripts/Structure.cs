@@ -22,7 +22,7 @@ public static class Structure
         return new Queue<VoxelMod>();
 
     }
-
+    /*
     public static Queue<VoxelMod> MakeTree(Vector3 position, int minTrunkHeight, int maxTrunkHeight)
     {
 
@@ -50,6 +50,40 @@ public static class Structure
         return queue;
 
     }
+    */
+    public static Queue<VoxelMod> MakeTree(Vector3 position, int minTrunkHeight, int maxTrunkHeight)
+    {
+        Queue<VoxelMod> queue = new Queue<VoxelMod>();
+
+        // Determine the tree's height using Perlin noise for variability, or simply randomize within the given range.
+        int height = (int)(maxTrunkHeight * Noise.Get2DPerlin(new Vector2(position.x, position.z), 250f, 3f));
+        if (height < minTrunkHeight)
+            height = minTrunkHeight;
+
+        // Create the trunk of the tree.
+        for (int i = 0; i < height; i++)
+            queue.Enqueue(new VoxelMod(new Vector3(position.x, position.y + i, position.z), 6)); // Assuming '6' is the trunk material.
+
+        // Adjustments for the canopy - start at the top of the trunk and make a more natural, less cubic shape.
+        int canopyHeight = 3; // Fixed canopy height for simplicity.
+        int canopyRadius = 2; // Defines how far the canopy extends from the trunk.
+
+        // Create a spherical or blob-shaped canopy above the trunk.
+        for (int y = 0; y <= canopyHeight; y++)
+        {
+            for (int x = -canopyRadius; x <= canopyRadius; x++)
+            {
+                for (int z = -canopyRadius; z <= canopyRadius; z++)
+                {
+                    if (x * x + y * y + z * z <= canopyRadius * canopyRadius) // Simple sphere equation for a blob shape.
+                        queue.Enqueue(new VoxelMod(new Vector3(position.x + x, position.y + height + y, position.z + z), 11)); // Assuming '11' is the leaf material.
+                }
+            }
+        }
+
+        return queue;
+    }
+
 
     public static Queue<VoxelMod> MakeCacti(Vector3 position, int minTrunkHeight, int maxTrunkHeight)
     {
