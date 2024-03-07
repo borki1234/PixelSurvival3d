@@ -66,7 +66,7 @@ public class ChunkData
         World.Instance.worldData.AddToModifiedChunkList(this);
 
     }
-
+    
     public void ModifyVoxel(Vector3Int pos, byte _id, int direction)
     {
 
@@ -96,13 +96,16 @@ public class ChunkData
         }
 
         if (voxel.properties.isActive && BlockBehaviour.Active(voxel))
-            voxel.chunkData.chunk.AddActiveVoxel(voxel);
+            //voxel.chunkData.chunk.AddActiveVoxel(voxel);
+        /*
         for (int i = 0; i < 6; i++)
         {
             if (voxel.neighbours[i] != null)
                 if (voxel.neighbours[i].properties.isActive && BlockBehaviour.Active(voxel.neighbours[i]))
                     voxel.neighbours[i].chunkData.chunk.AddActiveVoxel(voxel.neighbours[i]);
         }
+        */
+        
 
         // Add this ChunkData to the modified chunks list.
         World.Instance.worldData.AddToModifiedChunkList(this);
@@ -113,6 +116,8 @@ public class ChunkData
 
     }
 
+    
+    
     public bool IsVoxelInChunk(int x, int y, int z)
     {
 
